@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>包裹配送状态</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tracking-number {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .notification {
+            margin-bottom: 2rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        li::before {
+            content: "•";
+            color: #e74c3c;
+            position: absolute;
+            left: -1.2rem;
+            font-size: 1.2rem;
+        }
+
+        .button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>配送狀態</h1>
+        
+        <div class="tracking-number">
+            您的包裹單號: <strong>5453848683</strong>
+        </div>
+
+        <div class="notification">
+            <h2>交付失敗通知</h2>
+            <ul>
+                <li>由於送貨地址不明確，您的包裹未送達</li>
+                <li>您的包裹已退回我們的營運中心</li>
+                <li>請更新您的地址，我們將在05/03再次發貨</li>
+            </ul>
+        </div>
+
+        <button class="button">繼續</button>
+    </div>
+</body>
+</html>
